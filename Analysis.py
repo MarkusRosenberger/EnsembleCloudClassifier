@@ -489,10 +489,10 @@ def Bootstrap_CM(TP, FP, FN, TN, n_draws = 10000):
 
     # some final checks
     assert np.min((random_TP, random_FP, random_FN, random_TN)) >=0    
-    assert random_TP + random_FN == pos_obs
-    assert random_TP + random_FP == pos_pred
-    assert random_FP + random_TN == neg_obs
-    assert random_FN + random_TN == neg_pred
+    assert np.all(random_TP + random_FN == pos_obs)
+    assert np.all(random_TP + random_FP == pos_pred)
+    assert np.all(random_FP + random_TN == neg_obs)
+    assert np.all(random_FN + random_TN == neg_pred)
 
     return {'random_TP': random_TP, 'random_FP' : random_FP,
             'random_FN' : random_FN, 'random_TN' : random_TN}

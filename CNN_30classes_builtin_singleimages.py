@@ -8,13 +8,12 @@ import os
 import numpy as np
 import pandas as pd
 import tensorflow as tf
-from tf.data import AUTOTUNE
+from tensorflow.data import AUTOTUNE
 import matplotlib.pyplot as plt
 import csv
 import h5py
 import Analysis as ana
 import Modelfunctions as mfunc
-
 
 # define number of cores to use in parallel
 tf.config.threading.set_intra_op_parallelism_threads(num_threads = 16)
@@ -27,7 +26,7 @@ n_residual_blocks = 2
 n_filters = [16, 32, 64, 128]
 initial_lr = 1e-4
 weight_decay = 1e-3
-EPOCHS = 200
+EPOCHS = 2
 BATCH_SIZE = 16
 
 # create directory for logs if it doesn't exist already

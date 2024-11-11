@@ -17,7 +17,7 @@ import Analysis as ana
 import Modelfunctions as mfunc
 
 ens_dir = '<path_to_directory>'
-model_name = '<name-of_model_directory'
+model_name = '<name-of_model_directory>'
 n_classes = 30
 p_thresh = 0.5
 
@@ -78,6 +78,7 @@ rec_AB_mean = np.array([o['Recall'] for o in output_dict_AB])
 '''
 AB macro-average, no weights
 '''
+
 Prec_AB_macro = np.nanmean(prec_AB_mean)
 Rec_AB_macro = np.nanmean(rec_AB_mean)
 MCC_AB_macro = np.nanmean(MCC_AB_mean)
@@ -336,6 +337,7 @@ n_bins = 10
 '''
 AB
 '''
+
 REL_AB = []
 RES_AB = []
 UNC_AB = []
@@ -349,6 +351,7 @@ for i in range(n_classes):
 '''
 MB
 '''
+
 REL_MB = []
 RES_MB = []
 UNC_MB = []
@@ -410,11 +413,13 @@ BSS_MB_mean = np.mean(BSS_MB, axis = 1)
 '''
 BSS AB micro-average
 '''
+
 BSS_AB_micro = (np.sum(RES_AB) - np.sum(REL_AB))/np.sum(UNC_AB)
 
 '''
 BSS MB macro-average, with and without weights
 '''
+
 BSS_MB_mean_macro_noweight = np.ma.average(np.ma.array(BSS_MB_mean, mask=np.isnan(BSS_MB_mean)), weights=None)
 BSS_MB_mean_macro_weights = np.ma.average(np.ma.array(BSS_MB_mean, mask=np.isnan(BSS_MB_mean)), weights=MLCM_wgts_MB)
 

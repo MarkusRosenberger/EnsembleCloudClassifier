@@ -15,7 +15,8 @@ import Analysis as ana
 import Modelfunctions as mfunc
 
 # directory, in which the model runs are stored
-ens_dir = '<path_to_directory>'
+# ens_dir = '<path_to_directory>'
+ens_dir = '/srvfs/home/mrosenberger/CNNResults/Icos/Einzelbilder/FinalTraining/v18_adddenselayer_shuffledinput_shuffledvalidation_BSmeanLoss_2resblocks_finaltraining/ModelRuns/'
 
 # load observations and images
 with open('GroundTruth_outofsample.csv', mode ='r') as file:
@@ -61,11 +62,13 @@ MCC_oos = []
 
 for i in range(30):
 
+    # test data
     output = ana.calculate_measures(MLCM_AB, index = i, measures = ['Precision', 'Recall', 'MCC'], do_bootstrap=False)
     Prec_test.append(output['Precision'])
     Rec_test.append(output['Recall'])
     MCC_test.append(output['MCC'])
 
+    # out of sample data
     output = ana.calculate_measures(MLCM_AB_oos, index = i, measures = ['Precision', 'Recall', 'MCC'], do_bootstrap=False)
     Prec_oos.append(output['Precision'])
     Rec_oos.append(output['Recall'])
