@@ -15,8 +15,7 @@ import Analysis as ana
 import Modelfunctions as mfunc
 
 # directory, in which the model runs are stored
-# ens_dir = '<path_to_directory>'
-ens_dir = '/srvfs/home/mrosenberger/CNNResults/Icos/Einzelbilder/FinalTraining/v18_adddenselayer_shuffledinput_shuffledvalidation_BSmeanLoss_2resblocks_finaltraining/ModelRuns/'
+ens_dir = '<path_to_directory>'
 
 # load observations and images
 with open('GroundTruth_outofsample.csv', mode ='r') as file:
