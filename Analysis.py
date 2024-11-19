@@ -13,7 +13,7 @@ import tensorflow as tf
 def MLCM(ground_truth, predicted_classes, thresh = 0.5, return_plot = 'all', types = None, from_logits = False, **kwargs):
     '''
 
-    Calculation of the Multi-Label ClassificatioN Matrix as defined by Heydarian et al. (2022)
+    Calculation of the Multi-Label Classification Matrix as defined by Heydarian et al. (2022)
 
     Parameters
     ----------
