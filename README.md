@@ -6,6 +6,12 @@ In this work 10 identical Residual Neural Networks are trained to classify cloud
 
 ***
 
+The corresponding paper can be cited as:
+
+Rosenberger, M., Dorninger, M., & Weissmann, M. (2025). Deriving WMO cloud classes from ground-based RGB pictures with a residual neural network ensemble. Earth and Space Science, 12, e2024EA004112. https://doi.org/10.1029/2024EA004112
+
+***
+
 The published code version can be cited as:
 
 Rosenberger, M. (2024). Python code for "Deriving WMO cloud classes from ground-based RGB pictures with a residual neural network ensemble" (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.14185529
