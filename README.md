@@ -1,6 +1,7 @@
 # Deriving WMO cloud classes from ground-based RGB pictures with a residual neural network ensemble
 
-This repository contains code, which complements the soon-to-be published work of Rosenberger et al. In this work 10 identical Residual Neural Networks are trained to classify clouds from ground-based pictures in a multi-label setup. 30 different classes are used, according to the WMO cloud classification scheme for operational meteorological observations. 
+This repository contains code, which complements the work of Rosenberger et al. (2025) that can be found here: https://doi.org/10.1029/2024EA004112
+In this work 10 identical Residual Neural Networks are trained to classify clouds from ground-based pictures in a multi-label setup. 30 different classes are used, according to the WMO cloud classification scheme for operational meteorological observations. 
 
 ***
 
